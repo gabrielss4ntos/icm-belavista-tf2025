@@ -70,7 +70,7 @@
             color: #333;
             font-size: clamp(8px, 2.5vw, 12px);
             position: relative;
-            top: -35px;
+            top: -15px;
          }
 
         #area-convite h2 {
@@ -166,7 +166,7 @@
     </div>
 
     <script>
-        const ENDERECO_FIXO = "Rua João Ribeiro de Camargo, 334 - Campo Pequeno - Colombo-PR";
+        const ENDERECO_FIXO = "Rua João Ribeiro de Camargo, 334 - Campo Pequeno<br>Colombo-PR";
         function gerarConvite() {
             var nome = document.getElementById('campo-nome').value;
             if (nome.trim() === "") {
@@ -181,7 +181,7 @@
 
             /* !!!! MUDANÇA NO JAVASCRIPT BEM AQUI !!!! */
             /* Tirei o .toUpperCase() para não ficar tão gritante */
-            document.getElementById('endereco-destaque').innerText = ENDERECO_FIXO;
+            document.getElementById('endereco-destaque').innerHTML = ENDERECO_FIXO;
 
 
             document.getElementById('area-input').style.display = 'none';
